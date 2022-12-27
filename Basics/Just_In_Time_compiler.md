@@ -29,3 +29,13 @@ let func = function(){
 }
 func() //does not give error as the if condition never executes
 ```
+
+### 3. **What is call stack and memeory heap?**
+
+Call Stack is used to keep track of where we are currently in the code execution. Its like a stack where a new execution context is added on top of the existing one whenever a new function is invoked. When the execution of that function is completed it is popped out from the stack.
+
+Memory Heap is used for memory allocation.
+
+### 4. **Is Javascript single threaded or multi threaded? OR Is Javascript synchronous or asynchronous?**
+
+Javascript is single threaded and synchronous language. It uses Call stack which makes it single threaded and synchronous. But with the help of event-loop and promises, JavaScript is used to do asynchronous programming also.
