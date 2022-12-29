@@ -9,3 +9,9 @@ Note: Slice method won't mutate the original array but it returns the subset as 
 
 ## 3. **What is the difference between == and === operators?**
 JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. The strict operators take type of variable in consideration, while non-strict operators make type correction/conversion based upon values of variables
+
+## 4. **What is a Cookie?**
+A cookie is a piece of data that is stored on your computer to be accessed by your browser. Cookies are saved as key/value pairs.
+
+## 5. **Why do you need a Cookie?**
+Cookies are used to remember information such as the user profile(such as username).
