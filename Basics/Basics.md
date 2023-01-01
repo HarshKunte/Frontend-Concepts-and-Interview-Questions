@@ -18,3 +18,13 @@ Cookies are used to remember information such as the user profile(such as userna
 
 ## 6. **What is the main difference between localStorage and sessionStorage?**
 LocalStorage is the same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
+
+## 7. **What is IIFE(Immediately Invoked Function Expression)?**
+IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+Example:
+(function () {
+  // logic here
+})();
+
+## 8. **What is a promise?**
+A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
