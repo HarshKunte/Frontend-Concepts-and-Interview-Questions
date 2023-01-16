@@ -41,3 +41,33 @@ Note: Slice method won't mutate the original array but it returns the subset as 
 The splice() method is used either adds or removes items from an array, and then returns the removed item. 
 The first argument specifies the array position for insertion or deletion whereas the optional second argument indicates the number of elements to be deleted. Each additional argument is added to the array.
 Note: Splice method modifies the original array and returns the deleted array.
+
+
+
+### List some features of JavaScript.
+
+Who developed JavaScript, and what was the first name of JavaScript?
+
+JavaScript was developed by Brendan Eich, who was a Netscape programmer. Brendan Eich developed this new scripting language in just ten days in the year September 1995. At the time of its launch, JavaScript was initially called Mocha. After that, it was called Live Script and later known as JavaScript.
+
+### List some of the advantages of JavaScript.
+
+Some of the advantages of JavaScript are:
+
+    Server interaction is less
+    Feedback to the visitors is immediate
+    Interactivity is high
+    Interfaces are richer
+
+
+### List some of the disadvantages of JavaScript.
+Some of the disadvantages of JavaScript are:
+
+    No support for multithreading
+    No support for multiprocessing
+    Reading and writing of files is not allowed
+    No support for networking applications.
+
+
+### What is ECMAScript ?
+ECMAScript is the scripting language that forms the basis of JavaScript. ECMAScript standardized by the ECMA International standards organization in the ECMA-262 and ECMA-402 specifications. The first edition of ECMAScript was released in 1997. 
