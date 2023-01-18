@@ -30,27 +30,27 @@ Example:
 A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
 
 
-### What is the difference between == and === operators?
+## What is the difference between == and === operators?
 JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. The strict operators take type of variable in consideration, while non-strict operators make type correction/conversion based upon values of variables
 
-### What is the purpose of the array slice method?
+## What is the purpose of the array slice method?
 The slice() method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end.
 Note: Slice method won't mutate the original array but it returns the subset as a new array.
 
-### What is the purpose of the array splice method?
+## What is the purpose of the array splice method?
 The splice() method is used either adds or removes items from an array, and then returns the removed item. 
 The first argument specifies the array position for insertion or deletion whereas the optional second argument indicates the number of elements to be deleted. Each additional argument is added to the array.
 Note: Splice method modifies the original array and returns the deleted array.
 
 
 
-### List some features of JavaScript.
+## List some features of JavaScript.
 
 Who developed JavaScript, and what was the first name of JavaScript?
 
 JavaScript was developed by Brendan Eich, who was a Netscape programmer. Brendan Eich developed this new scripting language in just ten days in the year September 1995. At the time of its launch, JavaScript was initially called Mocha. After that, it was called Live Script and later known as JavaScript.
 
-### List some of the advantages of JavaScript.
+## List some of the advantages of JavaScript.
 
 Some of the advantages of JavaScript are:
 
@@ -60,7 +60,7 @@ Some of the advantages of JavaScript are:
     Interfaces are richer
 
 
-### List some of the disadvantages of JavaScript.
+## List some of the disadvantages of JavaScript.
 Some of the disadvantages of JavaScript are:
 
     No support for multithreading
@@ -69,5 +69,28 @@ Some of the disadvantages of JavaScript are:
     No support for networking applications.
 
 
-### What is ECMAScript ?
+## What is ECMAScript ?
 ECMAScript is the scripting language that forms the basis of JavaScript. ECMAScript standardized by the ECMA International standards organization in the ECMA-262 and ECMA-402 specifications. The first edition of ECMAScript was released in 1997. 
+
+
+
+## Type coercion in JS
+  Type coercion means when operands to the left and right of the operator have different type , one of them will be converted into an equivalent value by the Javascript engine.
+
+  For example
+  1 == '1'
+
+  In this JS will convert '1' to 1.
+  1==1 //true
+
+  But when we use === in JS, it means that dont use type coercion and compare the values explicitly
+
+  Object.is() is also used to compare. But it is used to check some weird cases as well
+
+  For example
+
+  -0 === +0 //true
+  Object.is(-0, +0) //false
+
+  NaN === NaN  //false
+  Object.is(NaN, NaN)  //true
