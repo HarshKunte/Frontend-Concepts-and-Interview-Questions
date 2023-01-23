@@ -94,3 +94,14 @@ ECMAScript is the scripting language that forms the basis of JavaScript. ECMAScr
 
   NaN === NaN  //false
   Object.is(NaN, NaN)  //true
+
+
+
+## What are PWAs ?
+Progressive web applications (PWAs) are a type of mobile app delivered through the web, built using common web technologies including HTML, CSS and JavaScript. These PWAs are deployed to servers, accessible through URLs, and indexed by search engines.
+
+## What is V8 JavaScript engine ?
+V8 is an open source high-performance JavaScript engine used by the Google Chrome browser, written in C++. It is also being used in the node.js project. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. Note: It can run standalone, or can be embedded into any C++ application.
+
+## What is jQuery ?
+jQuery is a popular cross-browser JavaScript library that provides Document Object Model (DOM) traversal, event handling, animations and AJAX interactions by minimizing the discrepancies across browsers. It is widely famous with its philosophy of “Write less, do more”.
