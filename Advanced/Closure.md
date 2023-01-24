@@ -2,6 +2,8 @@ Closure
 
 Closures allow a function to access variables from an outer scope environment event after it leaves the scope in which it was created.
 
+When a function along with its lexical scope is returned it forms a closure.
+
 When an outer function returns an inner function, the inner function has access to the variables of its outer function, which are not released from the memory even when the outer function is done executing itself.
 
 Hence the inner function can be called anytime later and it will still have the access to outer function variables
