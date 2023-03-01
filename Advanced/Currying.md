@@ -28,4 +28,22 @@ const curriedSum = curry((a,b,c)=> a+b+c)
 console.log(curriedSum(2)(3,4)) //6
 console.log(curriedSum(1)(2)(3))) //6
 console.log(curriedSum(1,2)(3)) //6
+
+```
+
+Real life examples of currying
+
+```
+
+const get = curry((property, object)=> object[property]);
+//get('id',{id:1, name:'joh'}) ----> 1
+
+const getld = get("id");
+//getId({id:1, name:'john'}) ----> 1
+
+const map = curry((fn, values) values.map(fn));
+// map(getId, [{id:1}, {id:2}]) ----> [1,2]
+
+const getIds = map(getId);
+//getIds([{id:1}, {id:2}])    ------> [1,2]
 ```
