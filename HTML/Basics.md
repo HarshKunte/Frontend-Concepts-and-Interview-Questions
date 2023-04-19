@@ -87,12 +87,114 @@ They are used by Web Browsers, Search Engines, and other Web Services to rank th
 
 Read [Use of meta tag](https://www.geeksforgeeks.org/explain-use-of-meta-tags-in-html/).
 
+### Q. What is difference between SVG and Canvas?
+
+1. SVG:
+
+The Scalable Vector Graphics (SVG) is an XML-based image format that is used to define two-dimensional vector based graphics for the web. Unlike raster image (e.g. .jpg, .gif, .png, etc.), a vector image can be scaled up or down to any extent without losing the image quality.
+
+There are following advantages of using SVG over other image formats like JPEG, GIF, PNG, etc.
+
+    SVG images can be searched, indexed, scripted, and compressed.
+    SVG images can be created and modified using JavaScript in real time.
+    SVG images can be printed with high quality at any resolution.
+    SVG content can be animated using the built-in animation elements.
+    SVG images can contain hyperlinks to other documents.
+
+Example:
+
+```<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         #svgelem {
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-20%);
+            -ms-transform: translateX(-20%);
+            transform: translateX(-20%);
+         }
+      </style>
+      <title>HTML5 SVG</title>
+   </head>
+   <body>
+      <h2 align="center">HTML5 SVG Circle</h2>
+      <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+         <circle id="bluecircle" cx="60" cy="60" r="50" fill="blue" />
+      </svg>
+   </body>
+</html>```
+
+2. Canvas:
+
+Canvas is a HTML element is used to draw graphics on a web page. It is a bitmap with an “immediate mode” graphics application programming interface (API) for drawing on it. The <canvas> element is only a container for graphics. In order to draw the graphics, you are supposed to use a script. Canvas has several strategies when it comes to drawing paths, boxes, circles, text & adding images.
+
+Example:
+
+```<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML5 Canvas Tag</title>
+   </head>
+   <body>
+      <canvas id="newCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+      <script>
+         var c = document.getElementById('newCanvas');
+         var ctx = c.getContext('2d');
+         ctx.fillStyle = '#7cce2b';
+         ctx.fillRect(0,0,300,100);
+      </script>
+   </body>
+</html>```
+
+Differences:
+SVG 	Canvas
+Vector based (composed of shapes) 	Raster based (composed of pixel)
+Multiple graphical elements, which become the part of the page's DOM tree 	Single element similar to in behavior. Canvas diagram can be saved to PNG or JPG format
+Modified through script and CSS 	Modified through script only
+Good text rendering capabilities 	Poor text rendering capabilities
+Give better performance with smaller number of objects or larger surface, or both 	Give better performance with larger number of objects or smaller surface, or both
+Better scalability. Can be printed with high quality at any resolution. Pixelation does not occur 	Poor scalability. Not suitable for printing on higher resolution. Pixelation may occur
+
 ### 2. What is iframe element in HTML
 An iFrame, also knowns as Inline Frame, is an element that loads another HTML element inside of a web page. They are commonly used to embed specific content like external ads, videos, tags, or other interactive elements into the page.
 
 ```HTML
 <iframe src="https://github.com" height="300px" width="300px"></iframe>
 ```
+
+### Q. What is progressive rendering?
+
+Progressive Rendering is the technique of sequentially rendering portions of a webpage in the server and streaming it to the client in parts without waiting for the whole page to rendered.
+
+It implies that once the important material is produced on the server, you may stream it to the client without having to wait for non-critical stuff to be displayed. It combines the advantages of both CSR (Client Side Rendering) and SSR (Server Side Rendering) (Server Side Rendering).
+
+1. Client Side Rendering:
+
+Client Side Rendering (CSR) is a technique in which content is rendered in the browser using JavaScript. Instead of getting all the content from the HTML file itself, the server sends HTML with an empty body and script tags that contain links to JavaScript bundles that the browser will use to render the content.
+
+Typical page load behaviour in CSR —
+
+    Browser requests the server for HTML
+    Server sends HTML with script tags in head and no content in body
+    Browser parses the HTML and makes http requests to load the scripts
+    Once the scripts are loaded, the browser parses them and makes API requests and loads all the content asynchronously
+
+Since the all the content starts loading only after loading the initial JavaScript, it takes a longer time to show any content on the page. If the user is on a slow network, the content is blocked for an even longer time due to lower bandwidth and higher latency.
+
+2. Server Side Rendering:
+
+When rendering on the server side, the HTML is rendered on the server and sent to the client. The content that we need to display on the screen becomes available immediately after the HTML is parsed; hence, primary rendering of content is faster than CSR.
+
+Typical page load behaviour in SSR —
+
+    Browser requests the server for HTML.
+    Server makes API requests (usually co-located) and renders the content in the server.
+    Once the page is ready, the server sends it to the browser.
+    The browser loads and parses the HTML and paints the content on the screen without waiting for the JavaScript bundle(s) to load.
+    Once the JavaScript bundle(s) are loaded, the browser hydrates interactivity to DOM elements, which is usually attaching event handlers and other interactive behaviours.
+
+Since the APIs are usually co-located with the server, the content is loaded super fast (faster than CSR) and the HTML is sent to the browser. Initial JavaScript load doesn't block content load as the HTML sent by the server already has the content.
 
 
 ### 3.  How can you highlight text in HTML?
