@@ -1,4 +1,4 @@
-## Topics
+## Javascript Concepts
 
-[Data Types](./Datatypes.md)
-[Arrays & its Methods](./Arrays&Methods.md)
+- [Data Types](./Datatypes.md)
+- [Arrays & its Methods](./Arrays&Methods.md)
