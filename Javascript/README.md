@@ -6,3 +6,4 @@
 - [Scopes and Hoisting](./Scope&Hoisting.md)
 - [ProtoTypes](./Prototype.md)
 - ['this' keyword](./this.md)
+- [Closures](./Closures.md)
