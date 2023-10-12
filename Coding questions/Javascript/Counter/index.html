@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+</head>
+<style>
+    body{
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center
+}
+#counter{
+  font-weight:bold;
+  font-size:1.5rem
+}
+button{
+  background-color:cyan;
+  padding:0.5rem 1rem
+}
+</style>
+<body>
+  
+  <p id="counter">0</p>
+  <div>
+  <button class="btn" id="increment">+</button>
+  <button class="btn" id="decrement">-</button>
+  </div>
+  
+  <p>Increment/Decrement by: <input id="increment-value" type="number" id="value" value = "1"/> </p>
+  
+  <button class="btn" id="reset">Reset</button>
+  
+  
+</body>
+<script>
+    let counter = document.getElementById('counter');
+    let incBtn = document.getElementById('increment');
+    let decBtn = document.getElementById('decrement');
+    let resetBtn = document.getElementById('reset');
+    let stepsVal = document.getElementById('increment-value');
+
+    incBtn.addEventListener('click', incrementOrDecrement)
+    decBtn.addEventListener('click', incrementOrDecrement)
+    resetBtn.addEventListener('click', reset)
+
+    function incrementOrDecrement(e){
+    let counterVal = parseInt(counter.innerText)
+    let elem = e.target
+    if(elem.id === 'increment'){
+        counterVal += parseInt(stepsVal.value);
+    }
+    else{
+        counterVal -= parseInt(stepsVal.value);
+    }
+    counter.innerText = counterVal
+    }
+
+    function reset(e){
+    counter.innerText = 0
+    }
+</script>
+</html>
