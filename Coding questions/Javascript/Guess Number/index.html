@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing game</title>
+</head>
+<body>
+  <p>Enter guess between 0 to 100</p>
+  <input id="number-input" type="number" placeholder="Enter number"/><br>
+  <button class="submit">Submit</button>
+  <button class="restart">Restart</button>
+  
+  <p class='result'></p>
+  
+  <p class="guesses">Your guesses : </p>
+  
+
+  <script>
+
+let input = document.getElementById('number-input');
+let submitBtn = document.querySelector('.submit');
+let restartBtn = document.querySelector('.restart');
+let guesses = document.querySelector('.guesses');
+let result = document.querySelector('.result');
+
+let numberToGuess = Math.round(Math.random()*100);
+console.log(numberToGuess)
+
+submitBtn.addEventListener('click', ()=>{
+  let guessedNumber = input.value;
+  if(guessedNumber<numberToGuess){
+    result.innerText = "Too low!!"
+    guesses.innerText += guessedNumber+", ";
+  }
+  else if(guessedNumber>numberToGuess){
+    result.innerText = "Too High"
+    guesses.innerText += guessedNumber+", ";
+  }
+  else{
+    result.innerText = "Congrats! you are correct!"
+    input.setAttribute('disabled', true);
+  }
+})
+
+restartBtn.addEventListener('click', ()=>{
+  result.innerText = ""
+  guesses.innerText = ""
+  input.setAttribute('disabled', false) 
+  numberToGuess = Math.round(Math.random()*100);
+})
+  </script>
+  
+</body>
+</html>
