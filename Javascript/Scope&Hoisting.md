@@ -62,7 +62,13 @@ Variables declared with `var` are initially stored as undefined in memory, until
 Because of hoisting we can access `var`  variables and functions before they are declared in the source code. Only the difference is that until the value is assigned to the variable in the source code `var` variables will be stored as **undefined**, but functions are fully stored hence can be executed.
 
 ### **Temporal Dead Zone**
-The Temporal Dead Zone (TDZ) is a behavior in JavaScript that occurs when trying to access a variable declared with `let` or `const` before its actual declaration. During the TDZ, the variable exists but is not yet initialized and cannot be accessed. This concept is a result of the block scoping introduced with ES6 (ECMAScript 2015) for variables declared using `let` and `const`.
+TDZ is the time since when let/const variable was hoisted till it is initialized some value, it is not accessible  in the source code.
+
+TDZ occurs when let and const variables are hoisted.
+
+let and const variables are assigned memory, but they are not attached to the global scope and are kept in TDZ until they are initialized.
+
+During the TDZ, the variable exists but is not yet initialized and cannot be accessed.
 
 In the TDZ, any attempt to access the variable before its declaration results in a `ReferenceError`, signaling that the variable is not yet defined.
 
