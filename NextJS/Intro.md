@@ -14,3 +14,20 @@ Allows to build FULLSTACK app with React.js
 - Server-side Rendering
     - By default NextJS (pre-) renders all pages on the server.
     - Advantage - The finished HTML page (including content) is sent to the client (great for SEO)
+
+
+# Two Approaches for building NextJS apps
+
+### 1. Pages Router
+
+- Has been around for many years
+- Very stable
+- Used in many existing Nextjs projects
+- Allows to build fullstack apps
+
+### 2. App Router
+
+- Introduced in NextJS 13
+- Marked as stable but relatively new and partially buggy
+- Supports modern Next & React features (fullstack React apps)
+- The future of NextJS
