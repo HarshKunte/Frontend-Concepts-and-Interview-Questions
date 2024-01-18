@@ -31,3 +31,20 @@ Allows to build FULLSTACK app with React.js
 - Marked as stable but relatively new and partially buggy
 - Supports modern Next & React features (fullstack React apps)
 - The future of NextJS
+
+## Creating NextJS APP
+
+Command to create app
+
+`npx create-next-app@latest`
+
+Using App Router method -
+
+When using AppRouter method an `app` folder is created in folder structure.
+
+Structure is something like this
+
+- app
+- public
+
+`app` folder is used for routing in Next JS
