@@ -48,3 +48,17 @@ Structure is something like this
 - public
 
 `app` folder is used for routing in Next JS
+
+## Reserved keywords for filenames in Next (only in app folder)
+
+`page.js` - Create new page (eg. app/about/page.js)
+
+`layout.js` - Create a new layout that wraps sibling and nested pages
+
+`not-found.js` - Fallback page for “Not found” errors (thrown by sibling or nested pages or layouts)
+
+`error.js` - Fallback page for other errors (thrown by sibling pages or nested pages or layouts)
+
+`loading.js` - Fallback page which is shown whilst sibling or nested pages (or layouts) are fetching data.
+
+`route.js` - Allows you to create an API route (i.e. page which does not return JSX code but instead data eg. in JSON format)
