@@ -62,3 +62,29 @@ Structure is something like this
 `loading.js` - Fallback page which is shown whilst sibling or nested pages (or layouts) are fetching data.
 
 `route.js` - Allows you to create an API route (i.e. page which does not return JSX code but instead data eg. in JSON format)
+
+
+## Creating Routes in Next JS
+
+Names of files are important in NextJS
+
+The page name should be `page.js`
+
+New folder should be created for each new route in `app` folder
+
+So to create `/about` route about folder should be created.
+
+And inside each route there should be a `page.js` file
+
+Below is example of folder structure -
+
+- app
+    - about/
+        - `page.js`
+    - contact/
+        - `page.js`
+    
+    `page.js` 
+    
+
+To create link for a page use `Link` component provided by Next js instead of `a` tag. Because when `a` tag is used a new page is given by the server and we do not get the single page app functionality.
