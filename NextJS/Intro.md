@@ -88,3 +88,45 @@ Below is example of folder structure -
     
 
 To create link for a page use `Link` component provided by Next js instead of `a` tag. Because when `a` tag is used a new page is given by the server and we do not get the single page app functionality.
+
+
+## Dynamic Routing in Next
+
+Suppose we have a `/blogs` page in our `app` folder. We cannot create a seperate folder for each blogpost. like `/blog/post1`   `/blog/post2` . This is not scalable.
+
+To do this dynamic routing in Next JS, it provides a syntax to create dynamic routes.
+
+Something like this
+
+- app
+    - blogs
+        - [ <any identifier> ]
+            - page.js
+        - page.js
+    - page.js
+
+So we can create folder using `[]` brackets and put any identifier inside it, and then create `page.js` inside which will work as dynamic route page. 
+
+```jsx
+// blogs/page.js
+
+export default function Blogs(){
+	return(
+		<Link href='/post-1'>Post 1</Link> // url: /blogs/post-1
+    <Link href='/post-2'>Post 2</Link> // url: /blogs/post-2
+	)
+}
+```
+
+When we click on any of the links above it will redirect to dynamic posts page
+
+```
+// blogs/[postId]/page.js
+
+// postId passed in URL can be accessed using params.postId
+export default function Blogs({params}){
+	return(
+		<p>Post name - {params.postId}</p>  //post-1 or post-2
+	)
+}
+```
