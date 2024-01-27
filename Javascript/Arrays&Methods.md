@@ -30,6 +30,13 @@ Arrays and its Methods
 - Arrays are created using square brackets `[]`. Elements are separated by commas.
 - Arrays are zero-indexed, meaning the first element is accessed using index `0`, the second with index `1`, and so on.
 
+## Ways to create Arrays -
+
+- using `[]`
+- using `new Array(<number of elements>)`
+- using `Array.of( <elements>) -------> ex. Array.of( 1,2,3 ) ---> [1,2,3]`
+- using `Array.from()` . useful to create array from something else
+
 **Common Array Methods**:
 1. `.push()`:
    - Adds one or more elements to the end of an array.
