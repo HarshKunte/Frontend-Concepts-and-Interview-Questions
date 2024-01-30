@@ -155,3 +155,43 @@ console.log(doubled); // [2, 4, 6, 8, 10]
 ```
 
 In this example, `map()` is the higher-order function and the function `number => number * 2` is the callback function passed as an argument.
+
+## Pure & Impure functions
+
+### Pure Functions
+
+In JavaScript, a pure function is a function which has the following properties:
+
+1. **Same output for the same input:** A pure function will always return the same output when provided with the same input.
+2. **No Side Effects:** A pure function does not cause any observable changes outside the function itself. This means it doesn't change any external variables, doesn't read from or write to the global state, doesn't mutate any parameters, and generally doesn't interact with the outside world (like I/O operations).
+
+Here's an example of a pure function:
+
+```jsx
+function add(a, b) {
+  return a + b;
+}
+
+```
+
+In this function, the output is always the same for any given `a` and `b`. And there are no side effects — it doesn't modify any state or variables outside the function.
+
+### Impure Functions
+
+On the contrary, an impure function is a function that does not have one or both of the properties of a pure function.
+
+1. **Different output for the same input:** An impure function may return different output for the same input, often due to external factors that the function depends on.
+2. **Has Side Effects:** An impure function may have side effects, such as mutating external variables, performing I/O operations, or changing the global state.
+
+Here's an example of an impure function:
+
+```jsx
+let count = 0;
+
+function increment() {
+  count++;
+}
+
+```
+
+In this function, the `increment` function is impure because it changes the global variable `count`. This is a side effect. Furthermore, it does not return a consistent output for the same input. In fact, it doesn't even take any input.
